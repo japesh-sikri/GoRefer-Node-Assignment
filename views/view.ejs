@@ -1,0 +1,22 @@
+<form action="/view" method="POST">
+    <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+    </div>
+    <div>
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location">
+    </div>
+    ( Fill any one or both fields to search. )
+    <button type="submit">Submit</button>
+</form>
+<a href="/">Home</a>
+<br>
+<br>
+<% if (datas) { %>
+    <% for (var i = 0; i < datas.length; i++) { %>
+        <div>Name: <%= datas[i].name %></div>
+        <div>Location: <%= datas[i].location %></div>
+        <br>
+    <% } %>
+<% } %>
